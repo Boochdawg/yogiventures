@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS with your Public Key
     if (typeof emailjs !== 'undefined') {
         emailjs.init("dV-b0Lj6tnbBkGBa");
+    } else {
+        console.error('EmailJS library failed to load.');
     }
     
     // Phone Number Click Tracking and Enhancement
@@ -896,6 +898,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Try to send email via EmailJS
                 try {
+                    if (typeof emailjs === 'undefined') {
+                        throw new Error('EmailJS library not available on this page.');
+                    }
                     // Check if EmailJS is configured
                     if (emailjsConfig.serviceId !== 'YOUR_SERVICE_ID' && 
                         emailjsConfig.templateId !== 'YOUR_TEMPLATE_ID' && 
@@ -923,6 +928,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 } catch (emailError) {
                     console.error('EmailJS Error:', emailError);
+                    const detail = emailError?.text || emailError?.message || 'Unknown error';
+                    showFormStatus(
+                        `Email failed to send: ${detail}. Please verify EmailJS settings or allowed domains.`,
+                        true
+                    );
                 }
 
                 if (emailSent) {
