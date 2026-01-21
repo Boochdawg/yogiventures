@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a luxury loft-inspired barbering appointment with YogiVentures, LLC.">
+    <title>Book Appointment | YogiVentures, LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">YogiVentures, LLC</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="barbering.html" class="nav-link">Barbering</a></li>
+                    <li><a href="#booking" class="nav-link nav-cta">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="booking-hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Appointment Request</p>
+                <h1 class="hero-title">Reserve Your Chair</h1>
+                <p class="hero-description">
+                    Lock in your preferred time. We will confirm your appointment within 24 hours.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-layout">
+                <form id="bookingForm" class="booking-form">
+                    <h2>Book Your Cut</h2>
+                    <div class="form-group">
+                        <label for="client-name">Full Name *</label>
+                        <input type="text" id="client-name" name="client-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Email *</label>
+                        <input type="email" id="client-email" name="client-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-phone">Phone *</label>
+                        <input type="tel" id="client-phone" name="client-phone" required placeholder="478-972-2645">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-select">Service *</label>
+                        <select id="service-select" name="service-select" required>
+                            <option value="">Select a service</option>
+                            <option value="men-fades">Mens Fade - $30</option>
+                            <option value="youth-fades">Youth Fades - $20</option>
+                            <option value="women-fades">Womens Fades - $25</option>
+                            <option value="mens-haircuts">Mens No Fade - $25</option>
+                            <option value="straight-hair-shear">Straight Hair Shear Cuts - $45</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-date">Preferred Date *</label>
+                        <input type="date" id="booking-date" name="booking-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-time">Preferred Time *</label>
+                        <input type="time" id="booking-time" name="booking-time" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Enhancements (optional)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="addon-beard" name="addon" value="beard">
+                                <label for="addon-beard">Facial Hair Grooming (+$5)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="addon-precut-wash" name="addon" value="precut-wash">
+                                <label for="addon-precut-wash">Precut Wash (+$10)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="addon-enhancements" name="addon" value="enhancements">
+                                <label for="addon-enhancements">Enhancements (+$10)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="addon-steam" name="addon" value="steam">
+                                <label for="addon-steam">Steam Service</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="addon-steam-exfoliation" name="addon" value="steam-exfoliation">
+                                <label for="addon-steam-exfoliation">Steam + Exfoliation (+$20)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-notes">Notes or requests</label>
+                        <textarea id="booking-notes" name="booking-notes" rows="3" placeholder="Anything we should know?"></textarea>
+                    </div>
+                    <div id="booking-status" class="form-status" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
+                </form>
+
+                <div class="booking-summary-card">
+                    <h3>Estimate Summary</h3>
+                    <div id="booking-summary" class="booking-summary" style="display: none;"></div>
+                    <div class="booking-disclaimer">
+                        <p>Appointments are requests until confirmed. We will reach out within 24 hours.</p>
+                        <p class="booking-contact">Need help? Call <a href="tel:4789722645">478-972-2645</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="logo-text">YogiVentures, LLC</span>
+                    </div>
+                    <p>Premium grooming with a refined edge.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="barbering.html">Barbering</a></li>
+                        <li><a href="index.html">Main Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Owner</h4>
+                    <a href="admin.html" class="footer-link">Owner Login</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YogiVentures, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img" aria-label="Woman getting a fade haircut">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f0f"/>
+      <stop offset="100%" stop-color="#292929"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="400" cy="290" r="150" fill="#232323" stroke="#d4af37" stroke-width="6"/>
+  <rect x="250" y="460" width="300" height="230" rx="28" fill="#1b1b1b" stroke="#d4af37" stroke-width="4"/>
+  <text x="400" y="290" fill="#d4af37" font-family="Inter, Arial, sans-serif" font-size="28" text-anchor="middle">Women Fade</text>
+  <text x="400" y="535" fill="#cccccc" font-family="Inter, Arial, sans-serif" font-size="20" text-anchor="middle">Woman fade haircut</text>
+  <text x="400" y="565" fill="#cccccc" font-family="Inter, Arial, sans-serif" font-size="20" text-anchor="middle">Replace with photo</text>
+</svg>
+
