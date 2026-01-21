@@ -46,78 +46,24 @@
     <section id="booking" class="booking-section">
         <div class="container">
             <div class="booking-layout">
-                <form id="bookingForm" class="booking-form">
-                    <h2>Book Your Cut</h2>
-                    <div class="form-group">
-                        <label for="client-name">Full Name *</label>
-                        <input type="text" id="client-name" name="client-name" required>
+                <div class="booking-form">
+                    <h2>Book with Booksy</h2>
+                    <p>Live availability and instant booking are now handled through Booksy.</p>
+                    <div style="margin: 20px 0;">
+                        <a class="btn btn-primary" href="https://cutzbyross.booksy.com/a/" target="_blank" rel="noopener noreferrer">
+                            Open Booksy Booking
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <label for="client-email">Email *</label>
-                        <input type="email" id="client-email" name="client-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="client-phone">Phone *</label>
-                        <input type="tel" id="client-phone" name="client-phone" required placeholder="478-972-2645">
-                    </div>
-                    <div class="form-group">
-                        <label for="service-select">Service *</label>
-                        <select id="service-select" name="service-select" required>
-                            <option value="">Select a service</option>
-                            <option value="men-fades">Mens Fade - $30</option>
-                            <option value="youth-fades">Youth Fades - $20</option>
-                            <option value="women-fades">Womens Fades - $25</option>
-                            <option value="mens-haircuts">Mens No Fade - $25</option>
-                            <option value="straight-hair-shear">Straight Hair Shear Cuts - $45</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="booking-date">Preferred Date *</label>
-                        <input type="date" id="booking-date" name="booking-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="booking-time">Preferred Time *</label>
-                        <input type="time" id="booking-time" name="booking-time" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Enhancements (optional)</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="addon-beard" name="addon" value="beard">
-                                <label for="addon-beard">Facial Hair Grooming (+$5)</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="addon-precut-wash" name="addon" value="precut-wash">
-                                <label for="addon-precut-wash">Precut Wash (+$10)</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="addon-enhancements" name="addon" value="enhancements">
-                                <label for="addon-enhancements">Enhancements (+$10)</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="addon-steam" name="addon" value="steam">
-                                <label for="addon-steam">Steam Service</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="addon-steam-exfoliation" name="addon" value="steam-exfoliation">
-                                <label for="addon-steam-exfoliation">Steam + Exfoliation (+$20)</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="booking-notes">Notes or requests</label>
-                        <textarea id="booking-notes" name="booking-notes" rows="3" placeholder="Anything we should know?"></textarea>
-                    </div>
-                    <div id="booking-status" class="form-status" style="display: none;"></div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit Booking Request</button>
-                </form>
+                    <p class="booking-note">
+                        The booking page opens in a new tab to ensure live availability loads correctly.
+                    </p>
+                </div>
 
                 <div class="booking-summary-card">
-                    <h3>Estimate Summary</h3>
-                    <div id="booking-summary" class="booking-summary" style="display: none;"></div>
+                    <h3>Need Help?</h3>
                     <div class="booking-disclaimer">
-                        <p>Appointments are requests until confirmed. We will reach out within 24 hours.</p>
-                        <p class="booking-contact">Need help? Call <a href="tel:4789722645">478-972-2645</a>.</p>
+                        <p>Use the button above to view live availability and book your time.</p>
+                        <p class="booking-contact">Call <a href="tel:4789722645">478-972-2645</a> for assistance.</p>
                     </div>
                 </div>
             </div>
@@ -152,7 +98,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script src="booking.js"></script>
 </body>
 </html>
 
