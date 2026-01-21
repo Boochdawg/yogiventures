@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // See EMAILJS_SETUP.md for detailed instructions
     // Initialize EmailJS with your Public Key
     if (typeof emailjs !== 'undefined') {
-        emailjs.init("dV-b0Lj6tnbBkGBa");
+        emailjs.init("dV-b0Lj6QtnbBkGBa");
     } else {
         console.error('EmailJS library failed to load.');
     }
@@ -887,7 +887,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const emailjsConfig = {
                     serviceId: 'service_lighwzi',      // Your EmailJS service ID
                     templateId: 'template_u747z1i',     // Your EmailJS template ID
-                    publicKey: 'dV-b0Lj6tnbBkGBa'         // Your EmailJS public key
+                    publicKey: 'dV-b0Lj6QtnbBkGBa'         // Your EmailJS public key
                 };
 
                 // Format email subject
