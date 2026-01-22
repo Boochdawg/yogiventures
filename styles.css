@@ -1956,6 +1956,221 @@ section {
     color: #f0f0f0;
 }
 
+.engineering-page {
+    background: #061321;
+    color: #e6f0ff;
+    font-family: 'Sora', 'Inter', sans-serif;
+    --highlight-color: #f2f2f2;
+    --gold-accent: #e6e6e6;
+    --gold-dark: #cfcfcf;
+    --gold-light: #fafafa;
+}
+
+.engineering-page .hero-title,
+.engineering-page .section-title {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    letter-spacing: 0.02em;
+}
+
+.engineering-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(120, 176, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 176, 255, 0.06) 1px, transparent 1px);
+    background-size: 120px 120px;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.engineering-page::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 15% 20%, rgba(111, 168, 255, 0.18), transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(120, 176, 255, 0.14), transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(63, 108, 255, 0.12), transparent 45%);
+    z-index: 0;
+}
+
+.engineering-page .navbar,
+.engineering-page main,
+.engineering-page section,
+.engineering-page footer {
+    position: relative;
+    z-index: 1;
+}
+
+.engineering-page .navbar {
+    background: rgba(6, 16, 28, 0.96);
+    border-bottom: 1px solid rgba(120, 176, 255, 0.18);
+}
+
+.engineering-page .logo-text {
+    background: linear-gradient(135deg, #7cc2ff 0%, #4b7dff 55%, #88e0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.engineering-page .nav-link {
+    color: rgba(214, 232, 255, 0.8);
+}
+
+.engineering-page .nav-link:hover {
+    color: #eaf6ff;
+}
+
+.engineering-page .nav-link.nav-cta {
+    background: linear-gradient(135deg, #6fa8ff 0%, #3f6cff 100%);
+    color: #04101e;
+    box-shadow: 0 4px 18px rgba(63, 108, 255, 0.35);
+}
+
+.engineering-page .nav-link.nav-cta:hover {
+    background: linear-gradient(135deg, #8fd0ff 0%, #4b7dff 100%);
+    color: #04101e;
+}
+
+.engineering-page .booking-hero {
+    background: radial-gradient(circle at 20% 20%, rgba(120, 176, 255, 0.18), transparent 40%),
+        linear-gradient(130deg, #061321 0%, #0d1f36 45%, #071a2a 100%);
+}
+
+.engineering-page .hero-title {
+    background: linear-gradient(135deg, #d9f0ff 0%, #9dc6ff 50%, #6fa8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 24px rgba(79, 132, 255, 0.4);
+}
+
+.engineering-page .hero-title,
+.engineering-page .section-title,
+.engineering-page .business-title {
+    text-shadow: 0 0 18px rgba(111, 168, 255, 0.35);
+}
+
+.engineering-page .hero-subtitle,
+.engineering-page .hero-description {
+    color: rgba(214, 232, 255, 0.85);
+}
+
+.engineering-page .about,
+.engineering-page .businesses,
+.engineering-page .contact {
+    background: #071826;
+}
+
+.engineering-page .section-title {
+    color: #e9f4ff;
+}
+
+.engineering-page .section-subtitle,
+.engineering-page .about-description {
+    color: rgba(214, 232, 255, 0.85);
+}
+
+.engineering-page .about-values .value-item {
+    background: rgba(10, 22, 36, 0.9);
+    border: 1px solid rgba(120, 176, 255, 0.15);
+}
+
+.engineering-page .business-card {
+    background: linear-gradient(145deg, #0b1f34 0%, #0f2742 100%);
+    border: 1px solid rgba(120, 176, 255, 0.18);
+    box-shadow: 0 16px 40px rgba(6, 18, 34, 0.6);
+    color: #e6f0ff;
+}
+
+.engineering-page .business-card:hover {
+    box-shadow: 0 20px 60px rgba(63, 108, 255, 0.35);
+    border-color: rgba(120, 176, 255, 0.4);
+}
+
+.engineering-page .business-icon {
+    color: rgba(167, 210, 255, 0.7);
+}
+
+.engineering-page .business-title,
+.engineering-page .business-description,
+.engineering-page .business-features,
+.engineering-page .business-features li,
+.engineering-page .about-values h4,
+.engineering-page .about-values p,
+.engineering-page .cta-panel h3,
+.engineering-page .cta-panel p,
+.engineering-page .cta-details,
+.engineering-page .contact-info,
+.engineering-page .contact-link,
+.engineering-page .footer,
+.engineering-page .footer a,
+.engineering-page .footer p {
+    color: #e6f0ff;
+}
+
+.engineering-page .contact-icon {
+    color: #8fbfff;
+}
+
+.engineering-page .contact-link:hover,
+.engineering-page .footer a:hover {
+    color: #ffffff;
+}
+
+.engineering-page .barbering-cta {
+    background: linear-gradient(135deg, rgba(120, 176, 255, 0.14) 0%, rgba(63, 108, 255, 0.06) 100%);
+}
+
+.engineering-page .cta-panel {
+    border: 1px solid rgba(120, 176, 255, 0.22);
+    background: rgba(8, 20, 34, 0.9);
+}
+
+.engineering-page .cta-panel {
+    box-shadow: 0 18px 50px rgba(63, 108, 255, 0.2);
+}
+
+.engineering-page .cta-panel h3 {
+    color: #e9f4ff;
+}
+
+.engineering-page .cta-panel p,
+.engineering-page .cta-details {
+    color: rgba(214, 232, 255, 0.8);
+}
+
+.engineering-page .contact-form {
+    background: linear-gradient(145deg, #0b1f34 0%, #0f2742 100%);
+    border: 1px solid rgba(120, 176, 255, 0.18);
+    box-shadow: 0 16px 40px rgba(6, 18, 34, 0.5);
+}
+
+.engineering-page .contact-form:focus-within {
+    box-shadow: 0 18px 50px rgba(120, 176, 255, 0.35);
+}
+
+.engineering-page .form-group input,
+.engineering-page .form-group select,
+.engineering-page .form-group textarea {
+    background: #061321;
+    border: 1px solid rgba(120, 176, 255, 0.18);
+    color: #e6f0ff;
+}
+
+.engineering-page .btn-primary {
+    background: linear-gradient(135deg, #6fa8ff 0%, #3f6cff 100%);
+    color: #04101e;
+}
+
+.engineering-page .btn-secondary {
+    border: 1px solid rgba(127, 184, 255, 0.4);
+    color: #e6f0ff;
+}
+
 .podcast-page .logo-text {
     font-family: 'Space Grotesk', 'Inter', sans-serif;
     letter-spacing: 0.05em;
