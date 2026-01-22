@@ -75,6 +75,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -92,6 +100,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Scroll spy: highlight active nav link based on section visibility
+    const anchorLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+    const anchorTargets = anchorLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    if (anchorTargets.length > 0) {
+        const activateLink = (id) => {
+            anchorLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    activateLink(entry.target.id);
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        anchorTargets.forEach(target => spyObserver.observe(target));
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -103,6 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
+        });
+    }
+
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.pageYOffset > 400);
         });
     }
 
