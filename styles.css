@@ -140,6 +140,14 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
+.nav-link.active {
+    color: var(--gold-accent);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -2179,6 +2187,11 @@ section {
     color: #e6e6e6;
 }
 
+.podcast-page .cta-primary {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
 .podcast-nav .nav-wrapper {
     padding: 1rem 0;
 }
@@ -2447,6 +2460,42 @@ section {
     background: transparent;
     border: none;
     padding: 0;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: 0.9rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.08));
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(10px);
+    z-index: 999;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+
+.engineering-page .cta-primary {
+    box-shadow: 0 14px 30px rgba(63, 108, 255, 0.45);
 }
 
 @media (max-width: 1024px) {
